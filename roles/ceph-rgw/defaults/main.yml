@@ -21,6 +21,16 @@ cephx: true
 rgw_pull_port: "{{ radosgw_civetweb_port }}"
 rgw_pull_proto: "http"
 
+# Uncomment below lines to create pools for the rgw
+# TODO: recommend tuning pg_nums for different configurations
+#rgw_pool:
+#  rgw_pool_name1:
+#    pg_num: y1
+#  rgw_pool_name2:
+#    pg_num: y2
+#  rgw_pool_name3:
+#    pg_num: y3
+
 ##########
 # DOCKER #
 ##########

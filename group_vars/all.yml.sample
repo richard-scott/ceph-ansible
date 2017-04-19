@@ -326,6 +326,8 @@ dummy:
 #radosgw_dns_s3website_name: your.subdomain.tld # subdomain used by radosgw for website bucket hosting.
 # Rados Gateway options
 #email_address: foo@bar.com
+#TODO: PROVIDE SUGGESTIONS FOR DIFFERENT CONFIGURATIONS
+#radosgw_override_bucket_index_max_shards: 1
 
 ## REST API options
 #
