@@ -21,8 +21,20 @@ cephx: true
 rgw_pull_port: "{{ radosgw_civetweb_port }}"
 rgw_pull_proto: "http"
 
-# Uncomment below lines to create pools for the rgw
-# TODO: recommend tuning pg_nums for different configurations
+########
+#TUNING#
+########
+# The below values were determined to be safe defaults to 
+# prevent users from putting too many objects into their
+# buckets which causes performance and stability issues.
+#ceph_conf_overrides:
+#    rgw:
+#      radosgw_civetweb_num_threads: 100
+#      rgw_override_bucket_index_max_shards: 16
+#      rgw_bucket_default_quota_max_objects: 1638400 # i.e., 100K * 16
+
+# Fill in the below values (rgw_pool_nameX & pg_num) to 
+# create pools for the rgw with pg_num of placement groups
 #rgw_pool:
 #  rgw_pool_name1:
 #    pg_num: y1
